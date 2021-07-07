@@ -19,17 +19,16 @@ int main(int argc, char *argv[]){
                 printf("||use: ./program [host] [wordlist.txt]|");
                 printf("||||||||||Z2FicmllbCBhbG1laWRh|||||||||");
                 printf("|||||||||||||||||||||||||||||||||||||||");
-                return 0;
         }else{
                 for(iteration=1;iteration<=1024;iteration++){
                         struct hostent *target gethostbyname(argv[1]);
                         if(*target == NULL){
                                 printf("[!] HOST OFFLINE [!]");
-                                return 0;
                         }else{
                         printf("HOST ONLINE: %s",inet_ntoa(*((struct in_addr *)target->h_addr)));
                         }
                 }
         }
+        return 0;
 }
 
